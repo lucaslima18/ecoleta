@@ -1,0 +1,72 @@
+/* BOX MODEL
+Modelo da caixa
+
+Toda caixa tem 
+largura, altura, espaçamentos, preenchimentos
+bordas, cor, fundo, maneira que é vista pelo html (display)
+
+aling -> alinhamento dos elementos
+justfy-content -> criar espaçamento
+
+. --> identifica uma class
+background-color --> define uma cor de fundo para o elemento
+
+width --> largura (use px para fixa, % para dinâmica, vh ou vw para dinamico)
+    vh ou vw --> calcula com base em toda a viewpart (altura --> vr, largura --> vw)
+margin --> define a margem (ajusta o posicionamento do elemento na tela)
+margin: [top right botton left] --> margin: 50px auto 20px 15px;
+
+sue o cascate stylesheet, nele você coloca o id e ao lado a class que pertence a esse id
+
+background --> agrupa um conjunto de atributos referentes ao fundo do elemento
+height --> altura de um elemento
+position --> define a posição do elemento (x, y)
+
+para zerar os espaços disponíveis no navegador
+
+* seletor para tudo
+
+board-radius --> atalhos para as laterais 
+
+:hover --> estilização especial
+
+transition --> tempo de transição medido em ms(milesegundos)
+
+::after --> pseudo elemento
+
+@media() --> regras especificas
+
+padding --> preenchimento de tela
+*/
+                                
+:root {
+    --title-color: #322153;
+    --primary-color: #34cb79;
+}
+
+html{
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #f0f0f5;
+    -webkit-font-something: antialiased;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--title-color);
+
+}
+
+
+
