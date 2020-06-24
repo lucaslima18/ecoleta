@@ -1,42 +1,19 @@
-<!DOCTYPE html>
+{% extends "layout.html" %}
 
-<!--
-    Hypertext
-        hiper texto
-    
-    Markup
-        Marcação de texto
-    
-    Lnaguage
-        Linguagem
-    
-    class (classifica os elementos html)
-    id (identificador para elementos)
--->
+{% set pageId = "page-create-point" %}
 
-<!-- tag html -->
-<html lang="pt_br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewpoint" content="width=device-widht, initial-scale=1.0">
-    <title>Crie um ponto de coleta</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/create-point.css">
-    <link rel="stylesheet" href="styles/responsive.css">
-</head>
+    {% block title %}
+      <title>Crie um ponto de coleta</title>
+    {% endblock title %}
 
-<body>
-    <div id="page-create-point">
-        <header>
-            <img src="assets/logo.svg" alt="Logomarca">
-            <a href="index.html">
-                <span></span>
-                Voltar para home
-            </a>
-        </header>
+
+    {% block styles %}
+      <link rel="stylesheet" href="styles/create-point.css">
+    {% endblock styles %}
+
+    {% block content %}
+      {% include "partials/page-header.html" %}
 
         <form action="">
             <h1>Cadastro do ponto de coleta</h1>
@@ -44,7 +21,7 @@
             <fieldset>
                 <legend>
                     <h2>Dados da entidade</h2>
-                </legend> 
+                </legend>
 
                 <div class="field">
                     <label for="name">Nome da entidade</label>
@@ -61,7 +38,7 @@
                         <label for="address2">Número/Complemento</label>
                         <input type="text" name="address2" required>
                     </div>
-                
+
                 </div>
 
                 <div class="field-group">
@@ -79,7 +56,7 @@
                             <option value="">Selecione a cidade</option>
                         </select>
                     </div>
-                
+
                 </div>
 
             </fieldset>
@@ -121,16 +98,15 @@
                         <span>Óleo de Cozinha</span>
                     </li>
                 </div>
-                
+
                 <input type="hidden" name="items">
 
             </fieldset>
 
             <button type="submit">Cadastrar ponto de coleta</button>
         </form>
+    {% endblock content %}
 
-    </div>
-
-    <script src="scripts/create-point.js"></script>
-</body>
-</html>
+    {% block scripts %}
+      <script src="scripts/create-point.js"></script>
+    {% endblock scripts %}
