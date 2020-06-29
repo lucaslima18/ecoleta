@@ -24,14 +24,14 @@
 #page-create-point a span {
     margin-right: 16px;
     background-image: url("../assets/arrow-left.svg");
-    
+
     display: flex;
     width: 20px;
     height: 24px;
 }
 
 form {
-    
+
     background-color: white;
 
     margin: 80px auto;
@@ -42,7 +42,7 @@ form {
     max-width: 730px;
 
     box-sizing: border-box;
-    
+
 }
 
 form h1 {
@@ -57,13 +57,25 @@ form fieldset {
 
 form legend {
     margin-bottom: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
 }
 
 form legend h2 {
     font-size: 24px;
 }
 
+form legend span {
+    font-size: 14px;
+    color: var(--title-color);
+}
+
 form .field {
+
     display: flex;
     flex-direction: column;
 

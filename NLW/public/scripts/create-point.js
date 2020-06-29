@@ -35,7 +35,7 @@ function populateCities(event, city_id) {
 		return res.json()
 	})
 	.then((cities) => {
-		
+
 
 		for( const city of cities ){
 			citiesSelect.innerHTML += `<option value="${city.nome}">${city.nome}</option>`
@@ -73,10 +73,12 @@ function handleSelectedItem(event) {
 	const itemId = itemLi.dataset.id
 	console.log(event.target.dataset.id)
 
+	console.log("ITEM ID: ", itemId)
+
 	//verificar se existem items selecionados
 	//pegar items selecionados
 	const alredySelected = selectedItems.findIndex( (item) => {
-		return item == itemId 
+		return item == itemId
 	})
 
 	console.log(alredySelected)
@@ -96,7 +98,7 @@ function handleSelectedItem(event) {
 		selectedItems.push(itemId)
 	}
 
-	console.log(selectedItems)
+	console.log("SELECTED ITEMS:", selectedItems)
 
 	//adicionar o campo escondido com os items selecionados
 	collectedItems.value = selectedItems
