@@ -1,2 +1,5 @@
-# next_level_week
-an project developed in rocketseat next level week
+#Ecoleta
+
+This website is an sample application for the dissemination of selective collection points for recyclable materials.
+
+
